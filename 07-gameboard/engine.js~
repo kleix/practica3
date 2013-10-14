@@ -236,7 +236,7 @@ var GameBoard = function() {
     // Cuando Game.loop() llame a draw(), hay que llamar al método
     // draw() de todos los objetos contenidos en el tablero
     this.draw= function(ctx) {
-	this.iterate('draw',ctx);
+		this.iterate('draw',ctx);
     };
 
     // Comprobar si hay intersección entre los rectángulos que

@@ -150,8 +150,44 @@ describe("Clase GameBoardSpec", function(){
 	});
 
 
+	it("overlap",function(){
+		var objetoprueba = new GameBoard();
+		var recprueba = new PlayerShip();
+		var a = {x:6,y:6,w:0,h:0}
+		var b = {x:4,y:4,w:2,h:2}
+
+		
+		var proverlap = function(a,b){
+			return !((a.y+o1.h-1<b.y) || (a.y>b.y+b.h-1) ||
+		 (a.x+a.w-1<b.x) || (a.x>b.x+b.w-1));
+   		 };
+			
+
+		expect(objetoprueba.overlap).toBeTruthy();
+
+	});
 
 
+
+	it("collide",function(){
+		var objetoprueba = new GameBoard();
+		var recprueba = new PlayerShip();
+		var a = {x:6,y:6,w:0,h:0}
+		var b = {x:4,y:4,w:2,h:2}
+
+		
+		var proverlap = function(a,b){
+			return !((a.y+o1.h-1<b.y) || (a.y>b.y+b.h-1) ||
+		 (a.x+a.w-1<b.x) || (a.x>b.x+b.w-1));
+   		 };
+			
+
+		expect(objetoprueba.collide).toBeTruthy();
+
+	});
+	
+	
+		
 });
 
 
