@@ -124,6 +124,34 @@ describe("Clase GameBoardSpec", function(){
 	});
 
 
+	it("step",function(){
+		var objetoprueba = new GameBoard();
+		var dt = 0.04;
+		spyOn(objetoprueba, "iterate");
+		spyOn(objetoprueba, "resetRemoved");
+		spyOn(objetoprueba, "finalizeRemoved");
+
+		objetoprueba.step(dt);
+
+		expect(objetoprueba.resetRemoved).toHaveBeenCalled();
+		expect(objetoprueba.finalizeRemoved).toHaveBeenCalled();
+		expect(objetoprueba.iterate).toHaveBeenCalledWith('step',dt);		
+	});
+
+
+	it("draw",function(){
+		var objetoprueba = new GameBoard();
+
+		spyOn(objetoprueba, "iterate");
+
+		objetoprueba.draw(ctx);
+	
+		expect(objetoprueba.iterate).toHaveBeenCalledWith('draw',ctx);
+	});
+
+
+
+
 });
 
 
