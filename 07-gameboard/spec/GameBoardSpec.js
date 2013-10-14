@@ -186,6 +186,8 @@ describe("Clase GameBoardSpec", function(){
 
 	});
 	
+
+	
 	
 		
 });
