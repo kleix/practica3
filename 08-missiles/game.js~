@@ -150,7 +150,7 @@ var PlayerMissile = function(x,y) {
 
 PlayerMissile.prototype.step = function(dt)  {
     this.y += this.vy * dt;
-    if(this.y < -this.h) {this.board.remove(this); }
+    if(this.y < -this.h) { this.board.remove(this); }
 };
 
 PlayerMissile.prototype.draw = function(ctx)  {

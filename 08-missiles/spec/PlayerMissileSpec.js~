@@ -53,8 +53,6 @@ describe("Clase PlayerMissileSpec", function(){
 
 	});
 
-});
-
 
 
 
