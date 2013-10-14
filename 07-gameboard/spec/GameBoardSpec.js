@@ -101,6 +101,29 @@ describe("Clase GameBoardSpec", function(){
 	
 		expect(objetoprueba.object).toEqual(undefined);
 	});
+
+
+	it("iterate",function(){
+		var objetoprueba = new GameBoard();
+		spyOn(objetoprueba, "iterate");
+		
+		objetoprueba.iterate("prueba",ctx);
+
+		expect(objetoprueba.iterate).toHaveBeenCalled();
+	});
+
+	
+	it("detect",function(){
+		var objetoprueba = new GameBoard();
+
+		var prdetect = function(){
+			return true;
+		}
+
+		expect(objetoprueba.detect).toBeTruthy();
+	});
+
+
 });
 
 
