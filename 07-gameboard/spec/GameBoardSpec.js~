@@ -1,4 +1,4 @@
-describe("Clase TitleScreen", function(){
+describe("Clase GameBoardSpec", function(){
     // Se deberá mostrar una pantalla de inicio o title screen que muestre
     // el nombre del juego e indicaciones para como comenzar a jugar
 
@@ -11,13 +11,13 @@ describe("Clase TitleScreen", function(){
     var canvas, ctx;
 
     beforeEach(function(){
-	loadFixtures('index.html');
+		loadFixtures('index.html');
 
-	canvas = $('#game')[0];
-	expect(canvas).toExist();
+		canvas = $('#game')[0];
+		expect(canvas).toExist();
 
-	ctx = canvas.getContext('2d');
-	expect(ctx).toBeDefined();
+		ctx = canvas.getContext('2d');
+		expect(ctx).toBeDefined();
 
     });
 
@@ -80,3 +80,49 @@ describe("Clase TitleScreen", function(){
     colisionado con objetos de cierto tipo, no con todos los objetos.
 
 */
+
+	it("add",function(){
+		var objetoprueba = new GameBoard();
+		var object = "prueba";
+
+		objetoprueba.add(object);
+		expect(objetoprueba.objects[0]).toEqual("prueba");
+
+	});
+
+	/*
+	it("remove",function(){
+		var objetoprueba = new GameBoard();
+		var object = "prueba";
+		
+		objetoprueba.resetRemoved();
+		objetoprueba.remove(object);
+		objetoprueba.finalizeRemoved();
+	
+		expect(objetoprueba.object).toEqual(undefined);
+	});*/
+});
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
